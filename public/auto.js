@@ -60,6 +60,9 @@ function getFloor() {
 
 function downloadImage(str, type) {
   let images = [];
+  images = images.concat(str.match(/https:\/\/imgur\.dcard\.tw\/[^\.]+\.jpg/g));
+  images = images.concat(str.match(/https:\/\/imgur\.dcard\.tw\/[^\.]+\.png/g));
+  images = images.concat(str.match(/https:\/\/imgur\.dcard\.tw\/[^\.]+\.gif/g));
   images = images.concat(str.match(/https:\/\/i\.imgur\.com\/[^\.]+\.jpg/g));
   images = images.concat(str.match(/https:\/\/i\.imgur\.com\/[^\.]+\.png/g));
   images = images.concat(str.match(/https:\/\/i\.imgur\.com\/[^\.]+\.gif/g));
