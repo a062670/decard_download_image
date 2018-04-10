@@ -57,3 +57,21 @@ exports.getImages = async function(postid) {
   });
   return images;
 };
+
+exports.getCeil = async function(postid) {
+  let response = await axios
+    .get(`https://www.dcard.tw/f/xx/p/${postid}`)
+    .catch(err => {
+      console.log(err);
+    });
+  return response.data;
+};
+
+exports.getFloor = async function(postid, floor) {
+  let response = await axios
+    .get(`https://www.dcard.tw/_api/posts/${postid}/comments?after=${floor}`)
+    .catch(err => {
+      console.log(err);
+    });
+  return response.data;
+};

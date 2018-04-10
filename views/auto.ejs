@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dcaed Image Auto Download</title>
+</head>
+
+<body>
+  <input type="number" id="inputPostid" name="postid" autocomplete="off" placeholder="Post ID" value="">
+  <br>
+  <input type="number" id="inputFloor" name="floor" autocomplete="off" placeholder="樓層(選填)" value="">
+  <br>
+  <button type="button" id="button" onclick="go()">開屎</button>
+  <p>倒數：<span id="sec">5</span></p>
+  <p>已讀樓層：<span id="floor">0</span></p>
+
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+  <script src="/public/auto.js"></script>
+</body>
+
+</html>
