@@ -1,0 +1,16 @@
+a {
+  display: inline-block;
+  margin: 5px;
+  vertical-align: middle;
+}
+img {
+  display: block;
+  max-width: 300px;
+  max-height: 300px;
+}
+.imageBox {
+  margin: 0 -5px;
+}
+.red {
+  color: #f55;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dcaed Image Download</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+
+<body>
+  <form action="/" method="POST">
+    <p>https://www.dcard.tw/f/rainbow/p/<span class="red">228651569</span>-今天是個適合穿棉褲的日子（有圖）#微更</p>
+    <input type="text" name="postid" autocomplete="off" placeholder="Post ID" value="<%= postid %>">
+    <button type="submit">送出</button>
+  </form>
+
+  <% if(postid) { %>
+    <%= postid %>
+  <% } %>
+  <% if(images) { %>
+    <button onclick="download(<%=postid%>)">下載</button> <%=images.length%> 張圖
+    <div class="imageBox">
+      <% for(var image of images) { %>
+        <a href="<%=image%>" target="_blank">
+          <img src="<%=image%>">
+        </a>
+      <% } %>
+    </div>
+  <% } %>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+  <script src="/public/script.js"></script>
+</body>
+
+</html>
